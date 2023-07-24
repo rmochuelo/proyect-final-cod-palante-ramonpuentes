@@ -1,0 +1,673 @@
+/* ---------------------------------- Colors ----------------------------------*/
+:root{
+  --theme-color: #3d5a77;
+  --primary-color:#6DA6D7;
+  --secundary-color:#D7EFFF;
+  --text-color-inverse: white;
+  --text-color:#B5D4E5;
+  --navbar--shadow--color: #609ED4;
+  --menu-mobil-back-color: #1f334b;
+
+  /*Paleta Primaria*/
+  --dark--grey--color: #0D141D;
+  --dark-orange-color: #FF6240;
+  --ligh-orange-color: #FC9B8B;
+  --dark--blue--color: #0563C1;
+  --ligth--blue-color: #3495D6;
+  
+  /*Paleta Secundaria de Grises*/
+  --gris1-color: #002644;
+  --gris2-color: #1F334B;
+  --gris3-color: #31455B;
+  --gris4-color: #3D5A77;
+  --gris5-color: #5D6E83;
+  --gris6-color: #7c92a5;
+
+  /*Paleta de Gris Plomo*/
+  --grisl1-color: #B5D4E5;
+  --grisl2-color: #97B7CA;
+  --grisl3-color: #799AAF;
+  --grisl4-color: #5B7D95;
+  --grisl5-color: #3C607A;
+  --grisl6-color: #1E435F;
+
+    /*Paleta de Azul Claro*/
+    --azul1-color: #D7EFFF;
+    --azul2-color: #B4D8F5;
+    --azul3-color: #91C0EA;
+    --azul4-color: #6EA9E0;
+    --azul5-color: #4B92D6;
+    --azul6-color: #287ACB;
+
+  --Bio-color:var(--dark--grey--color);
+}
+
+/* ---------------------------------- Fonts ----------------------------------*/
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--azul2-color);
+}
+
+.nav-link { 
+  text-decoration:none;
+  color: var(--gris2-color);
+}
+
+ul { 
+  list-style: none;
+}
+
+body.dark {
+  background: var(--gris3-color);
+}
+
+
+/* ---------------------------------- Container ----------------------------------*/
+
+*{
+margin: 0%;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+.navegador{ 
+display: flex;
+background-color: var(--secundary-color);
+background-image: url(../img/img2/cenefaIcon20-01.png);
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: right;
+margin: 0%; 
+margin: 0 auto;
+box-shadow: 0 1rem 1rem rgba(0,38,68, 25%);
+}
+
+.fotoramon{
+  width: 13rem;
+  margin-bottom:-0.28rem;
+} 
+
+.perfil {
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.name{
+  padding: 0.4rem;
+  margin-left: 1rem;
+  color: var(--dark-orange-color);
+}
+
+hr{
+  margin: 0;
+  border-color: var(--dark-orange-color);
+}
+
+/* ---------------------------------- Menú ----------------------------------*/
+.menu{
+  display: flex;
+  align-items: flex-end;
+  margin-right: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-menu-iten{
+  display: flex;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  width: max-content;
+  flex-basis: 100%;
+}
+
+.nav-menu-link {
+  text-transform: uppercase;
+  color: var(--theme-color);
+  padding: 0.5rem 0.7rem;
+  margin: 0.6rem;
+  box-shadow: 0em 0.2em 0.4em 0em var(--gris5-color);
+  border-radius: 0.7rem; 
+  background-color: var(--secundary-color);
+}
+
+.nav-menu-link:hover {
+  background-color: var(--grisl3-color);
+  border-radius: 0.7rem;
+  transition: 0.7s;  
+}
+
+/*---------------------*/
+
+body.dark header {
+background: var(--gris2-color);
+box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.16);
+background-image: url(../img/img2/cenefaIcon40-01.png);
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: right;
+margin: 0%; 
+margin: 0 auto;
+}
+
+body.dark .proObj {
+    color: var(--text-color);
+}
+
+
+body.dark .productIcon {
+  filter: brightness(0) saturate(100) invert(95%) sepia(20%) saturate(3016%) hue-rotate(173deg) brightness(102%) contrast(80%);
+}
+
+body.dark  .objicon {
+  filter: brightness(0) saturate(100) invert(95%) sepia(20%) saturate(3016%) hue-rotate(173deg) brightness(102%) contrast(80%);
+}
+
+
+body.dark nav:hover {
+color: #FEFEFE;
+}
+
+/* ---------------------------------- switch ----------------------------------*/
+
+#switch{
+  margin-bottom: -0.3rem;
+}
+
+.switch {
+background: #343D5B;
+border-radius: 1rem;
+border: none;
+position: relative;
+cursor: pointer;
+display: flex;
+outline: none;
+}
+
+.switch::after {
+content: "";
+display: block;
+width: 2rem;
+height: 2rem;
+line-height: 2rem;
+position: absolute;
+background: var(--secundary-color);
+top: 0;
+left: 0;
+right: unset;
+border-radius: 1rem;
+transition: 0.3s ease all;
+box-shadow: 0rem 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+background-color: orange;
+color: #2f4357;
+}
+.switch.active::after {
+right: 0;
+left: unset;
+}
+.switch span {
+width: 1.8rem;
+height: 1.8rem;
+line-height: 1.9rem;
+display: block;
+background: none;
+font-size: 1.1rem;
+color: white;
+}
+
+/* ---------------------------- Menú Hamburguesa ----------------------------*/
+
+.nav-toggle{
+color: var(--gris2-color);
+background: none;
+border: none;
+font-size: 2rem;
+margin-bottom: -0.7rem;
+display: none;
+}
+
+/* ---------------------------- Contenido ----------------------------*/
+
+.obj {
+  max-width: content;
+  margin: 3% 3%;
+  font-size: 1.2rem;
+}
+
+.objicon, .productIcon {
+  width: 1.2rem;
+}
+
+.productIcon {
+  margin: 0;
+  padding: 0;
+}
+
+.mensaje{
+  font-style: italic;
+}
+
+.titleExp{
+  margin-left: 4rem;
+  padding-top: 1.5rem;
+}
+/* ------------------------------- FORMACION -------------------------------*/
+
+h3{
+  color: var(--gris4-color);
+}
+
+#obj {
+  margin: 2%;
+  margin-top: 3%;
+  line-height: 2%;
+}
+
+.education, .certification, .contacto{
+  background-color: var(--azul4-color);
+  padding-bottom: 1.5rem;
+}
+
+.certification, .contacto{
+  padding: 2rem;
+}
+
+body.dark .education {
+  background: var(--gris2-color);
+}
+
+.footer{
+  background-color: var(--azul4-color);
+}
+
+body.dark .iconsButtons {
+  background: var(--gris4-color);
+}
+
+body.dark .footer {
+  background: var(--gris3-color);
+}
+
+
+body.dark .titleExp {
+  color: var(--text-color);
+}
+
+body.dark .experiences-body{
+  color: var(--text-color);
+}
+
+body.dark .experiences-title{
+  color: var(--text-color);
+}
+
+body.dark .experience-date{
+  color: var(--text-color);
+}
+
+body.dark .content1{
+  color: var(--text-color);
+}
+
+body.dark .campus{
+  color: var(--text-color);
+}
+
+body.dark .contact, .mail-button{
+  color: var(--text-color);
+}
+
+body.dark .mail{
+  color: var(--text-color);
+}
+
+.formation{
+  padding: 1rem 0;
+  display:flex;
+  flex-flow: wrap;
+  justify-content:space-around;
+  margin-right: 1.5rem;
+  align-items: center;
+}
+
+.cards{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: var(--azul3-color);
+  width: 13rem;
+  height: 10rem;
+  border-radius: 0.9rem;
+  box-shadow: 0rem 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.titcard{
+  padding-bottom: 0.2rem;
+}
+
+#cont {
+  background-color: #1F212B; padding-top: 0.8%; padding-left: 0.2%;padding-bottom: 0.3%;
+}
+
+#contenidos {
+  margin: 2%;
+  margin-top: 1%;
+}
+
+
+h1 {
+  color: var(--text-color); 
+}
+
+h4,p,ul,li,h3,.campus {
+  color: var(--grisl6-color);
+}
+
+/* ---------------------------- Experiancias ----------------------------*/
+
+.experiences{
+  display: flex;
+  flex-direction: column;
+}
+.experiences-body{
+  color: var(--gris1-color);
+}
+
+.experiences-title{
+  color: var(--gris2-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight:bold;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.experience-date{
+  font-size: 1.5rem;
+  font-weight:bold;
+  color: var(--menu-mobil-back-color);
+}
+
+.experience-company{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+
+}
+
+.experience-position{
+  font-weight: 500;
+  font-size:1.5rem;
+  margin-top: 0.5rem;
+}
+
+.experience-description{
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: -0.1rem;
+  line-height: 1.5;
+}
+
+.experience{
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ---------------------------- SABIAS----------------------------*/
+.contenedor1{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.row{
+  display: grid;
+  place-items: center;
+  padding: 3rem 0;
+  max-width: 1400px;
+}
+
+.row .left{
+  overflow: hidden;
+}
+
+.postits{
+  margin: 0%;
+  width: 30%;
+  border-radius: 50%;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  box-shadow: 0rem 0.2rem 2rem 0.4rem var(--azul4-color);
+
+}
+
+.content{
+  width: 60%;
+}
+
+.row .content p{
+  font-size: 1.3rem;
+  line-height: 26px;
+  padding-bottom: 15px;
+  padding-left: -2rem;
+}
+
+.descarga{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------- CONTACTO----------------------------*/
+
+.iconsButtons{
+  background-color: var(--grisl2-color);
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.iconos{
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+  width: 800px;
+}
+
+
+
+/* ---------------------------- FOTER----------------------------*/
+.footer {
+  padding: 3rem 0;
+  text-align:center;
+}
+
+.nav-menu-link{
+  text-decoration: none;
+}
+
+.btn_campus{
+  padding: 1rem;
+}
+
+.btn{
+  background-color:var(--azul3-color);
+}
+/* ---------------------------- @medias Queries----------------------------*/
+
+.flex-container {
+  flex-basis: 100%;
+}
+
+@media (min-width:950px){
+  
+  .experiences{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experiences-body{
+    color: var(--gris1-color);
+  }
+  
+  .experiences-title{
+    color: var(--gris2-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: 1.5rem;
+    margin: 2rem;
+  }
+  
+  .experience-date{
+    font-size: 1.5rem;
+    font-weight:bold;
+    color: var(--menu-mobil-back-color);
+  }
+  
+  .experience-company{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  
+  }
+  
+  .experience-position{
+    font-weight: 500;
+    font-size:1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .experience-description{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: -0.1rem;
+    line-height: 1.5;
+}
+
+.experience{
+  padding: 0;
+}
+
+.experiencies-grid{
+  display: grid;
+  grid-template-columns: auto 2px auto;
+  gap: 20px 30px;
+  padding: 30px;
+  justify-content: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.line {
+  background-color: var(--azul4-color);
+  position: relative;
+}
+
+.line::before,
+.line::after{
+  content:"";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--azul4-color);
+  border-radius: 50%;
+
+  position: absolute;
+  top: -20px;
+  left: -9px;
+}
+
+.line::after{
+  top: 100%;
+  z-index: 1; 
+}
+
+.experiences_left{
+  text-align: right;
+}
+}
+
+
+
+@media (min-width:885px){
+  
+  .flex-container{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    margin: 0 auto;
+    min-width:max-content;
+    min-width: 885px;
+    }
+}
+
+
+@media (max-width:790px){
+  .row{
+    padding: 3rem 0;
+    width: 80%;
+  }
+  }
+  
+
+@media (min-width:768px){
+  .switch {
+    margin: 0 1.5rem;
+  }
+
+  .nav-menu-link {
+      margin: 0.9rem;
+}
+
+
+}
+
+@media (max-width:530px){
+
+  .name{
+    margin-top: 70%;
+    scale: 80%;
+    margin-left: -0.1rem;
+  }
+  
+  .navegador{
+    display: flex;
+    justify-content: center;
+    margin-right: -20%;
+    margin-left: -5%;
+  }
+  
+  .education{
+    margin-right: -10%;
+    padding: 5% 0%;
+  }
+  
+  .obj{
+    margin: 2.5rem;
+  }
+  
+    .menu, .perfil{
+      display: flex;
+      align-items: center;
+      max-width: 100%;
+      scale: 80%;
+      width: 100%;
+      margin-top: -1.5rem;
+      margin-left: -1.5rem;
+    }
+  
+  
+  hr{
+    margin-right: -10%;
+  }
+}
